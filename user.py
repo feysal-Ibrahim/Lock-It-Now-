@@ -17,13 +17,13 @@ class User:
         self.first_name = first_name
         self.password = password
         """
-             attribute for object.
+            create attribute for object.
             """
 
     def save_user(self):
        User.users_list.append(self)
        '''
-     method to check is a user exists
+      create method to check is a user exists
         '''
     @classmethod
     def user_exists(cls, user_name):
