@@ -14,7 +14,9 @@ class User:
                   password: New user password.
               """
 
-        # self.first_name = first_name
-        # self.last_name = last_name
-        # self.password = password
-        #attribute for object
+        self.first_name = first_name
+        self.last_name = last_name
+        self.password = password
+        """
+             attribute for object.
+            """
