@@ -4,7 +4,7 @@ class User:
        """
     user_list = []
 
-    Init method down here
+    #Init method down here
 
     def __init__(self, first_name, last_name, password):
         """
