@@ -1,7 +1,7 @@
 import unittest  # Importing the unittest module
 from user import User  # Importing the contact class
 
-# class TestContact  (unittest.TestCase):
+ class TestUser  (unittest.TestCase):
 #     def setUp(self):
 #         self.new_user = User("feysal", "ibrahim", "123456789")  # create user object
 #         User.user_list = []
