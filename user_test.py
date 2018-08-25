@@ -11,7 +11,7 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
          self.assertEqual(self.new_user.password, "123456789")
 
     def test_save_user(self):
-      self.new_user.save_user()  # saving the new contact
+      self.new_user.save_user()  # saving the new user
       self.assertEqual(len(User.users_list), 1)
 
     def test_save_multiple_user(self):
@@ -26,9 +26,9 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
 
     def test_user_exists(self):
         '''
-              Method that checks if a user exists from the contact list.
+              Method that checks if a user exists from the user list.
               Returns :
-                  Boolean: True or false depending if the contact exists
+                  Boolean: True or false depending if the user exists
               '''
 
         self.new_user.save_user()
