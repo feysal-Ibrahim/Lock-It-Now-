@@ -2,7 +2,7 @@ import unittest  # Importing the unittest module
 from credentials import Credential # Importing the credential class
 class TestCredential  (unittest.TestCase): # create a subclass  called TestUser, that inherits from unittest TestCase
     def setUp(self):
-        self.new_user = Credential("facebook", "673766")  # create user object
+        self.new_user = Credential("facebook", "673766")  # create credentials object
 
     def tearDown(self):
      Credential.credentials_list = []
@@ -27,7 +27,7 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
 
     def test_delete_credntials(self):
             '''
-            test_delete_contact to test if we can remove a contact from our contact listg
+            test_delete_contact to test if we can remove a contact from our contact list
             '''
             self.new_credentials.save_credentials()
             test_credentials = Credential("twitter",  "123456")  # new credentials
@@ -35,3 +35,6 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
 
             self.new_credentials.delete_contact()  # Deleting a credentials object
             self.assertEqual(len(Credential.credentials_list), 1)
+
+    def test_display_all_credentials(self):
+            self.assertEqual(Credential.display_credentials(), Credential.credentials_list)
