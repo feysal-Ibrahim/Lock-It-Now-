@@ -25,12 +25,12 @@ class Credential:
 
 
 @classmethod
-def display_credential(cls, user_name):
+def display_credential(cls, account_name):
         """
         this method will take a user_name and
         return credentials that matches that user_name
         """
 
         for credential in cls.credential_list:
-            if credential.user_name == user_name:
+            if credential.account_name == account_name:
                 return credential

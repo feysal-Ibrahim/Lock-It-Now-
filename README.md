@@ -9,7 +9,7 @@ The application allows a user to create an account that stores passwords and oth
 You create a new password locker account basically by typing new on the application shell. Type keyword gen to generate a password or make to write a password of your liking. To view an account's credentials type short code dp and np to create new credentials.
 
 ### Setup/Installation Requirements
-Clone the repository from git hub at 'https://github.com/feysal-Ibrahim/Password-locker.git'
+Clone the repository from git hub at 'https://github.com/feysal-Ibrahim/Lock-It-Now-'
 Install python3.6 in your computer
 Using your terminal, navigate to the cloned project folder and while in it run $ python3.6 run.py on the shell.
 Built With
