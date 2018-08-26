@@ -38,3 +38,7 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
 
     def test_display_all_credentials(self):
             self.assertEqual(Credential.display_credentials(), Credential.credentials_list)
+
+
+if __name__ == '__main__':
+    unittest.main()

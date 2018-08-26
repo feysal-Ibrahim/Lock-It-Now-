@@ -21,7 +21,7 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
         self.assertEqual(len(User.users_list), 2)
 
         '''
-    add another test case test_save_multiple_user to test if we can save multiple user in our users list.
+     another test case test_save_multiple_user to test if we can save multiple user in our users list.
         '''
 
     def test_user_exists(self):
