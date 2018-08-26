@@ -1,9 +1,16 @@
-# def test_save_user(self):
-#     self.new_user.save_user()  # saving the new contact
-#     self.assertEqual(len(User.users_list), 1)
+import random
+
+
+# class Credential:
+#     '''
+#        Will generate new instances of account credentials
+#        '''
+#     credential_list:[]
 #
-# def test_save_multiple_user(self):
-#     self.new_user.save_user()
-#     test_user = User("Waititu", "river", "0713027855")
-#     test_user.save_user()
-#     self.assertEqual(len(User.users_list), 2)
+#     def __init__(self, account_name, password):
+#         '''
+#         Passed in three arguments of the isntances of our variables
+#         '''
+#         self.account_name = account_name
+#         self.password = password
+
