@@ -21,17 +21,17 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
         test_credentials.save_credentials()
         self.assertEqual(len(Credential.credentials_list), 2)
         '''
-    add another test case test_save_multiple_user to test if we can save multiple credentials in our credentials list.
+    add another test case test_save_multiple_credentials to test if we can save multiple credentials in our credentials list.
         '''
 
 
-    def test_delete_contact(self):
+    def test_delete_credntials(self):
             '''
-            test_delete_contact to test if we can remove a contact from our contact list
+            test_delete_contact to test if we can remove a contact from our contact listg
             '''
-            self.new_contact.save_contact()
-            test_contact = Contact("Test", "user", "0712345678", "test@user.com")  # new contact
-            test_contact.save_contact()
+            self.new_credentials.save_credentials()
+            test_credentials = Credential("twitter",  "123456")  # new credentials
+            test_credentials.save_credentials()
 
-            self.new_contact.delete_contact()  # Deleting a contact object
-            self.assertEqual(len(Contact.contact_list), 1)
+            self.new_credentials.delete_contact()  # Deleting a credentials object
+            self.assertEqual(len(Credential.credentials_list), 1)
