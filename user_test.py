@@ -24,6 +24,17 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
      another test case test_save_multiple_user to test if we can save multiple user in our users list.
         '''
 
+    def test_user_login(self):
+            '''
+            Test case to test user login
+            '''
+            self.new_user.save_user ()
+            test_user = User ("Sonko", "58468")
+            test_user.save_user ()
+
+            find_user = User.user_name ("Sonko")
+            self.assertEqual(find_user.user_name, test_user.user_name)
+
     def test_user_exists(self):
         '''
               Method that checks if a user exists from the user list.
