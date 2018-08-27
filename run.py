@@ -165,8 +165,8 @@ def main():
             print ("You seem to not have any saved accounts yet. Save an account using the cc code")
             print ('')
 
-        elif  short_code== "lg":
-         print("Log in")
+        # elif  short_code== "lg":
+        #  print("Log in")
         print("user_name")
         print("_" * 20)
         user_name = input ( )
@@ -215,25 +215,24 @@ def main():
 
                         print(f"New account details : Account: {account_name},Email:{email}, Password: {password}",)
                         print('')
-
-        elif short_code == "exit":
-             print('')
-             print("Goodbye ...")
-             break
-
-
-        else:
-               print("Please input a valid short code")
-
-    else:
-       print("A user with that username does not exist. Please register to start using the application")
-
-
-   elif short_code == "esc"
-     print('')
-     print("Exiting")
-     break else:
-     print ("I'm sorry, the short code does not seem to exist")
+        #
+        # elif short_code == "exit":
+        #      print('')
+        #      print("Goodbye ...")
+        #      break
+        #
+        #
+        # else:
+        #        print("Please input a valid short code")
+        #
+        #
+        # else:
+        #   print ("A user with that username does not exist. Please register to start using the application")
+   # elif short_code == "esc"
+   #   print('')
+   #   print("Exiting")
+   #   break else:
+   #   print ("I'm sorry, the short code does not seem to exist")
 
 if __name__ == '__main__':
         main ()

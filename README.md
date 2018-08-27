@@ -22,7 +22,7 @@ Built With
 The application was built using Python
 
 ### Known Bugs
-The application currently has no known bugs. If in case you come across any issues feel free to contact me through the email address below.
+The application currently does display users and their credentials but am working on it to ensure that bug is fixed. If in case you come across any other bugs/issues feel free to contact me through the email address below.
 
 ### Contact
 You can contact me at addictivefazman@gmail.com
