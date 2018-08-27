@@ -53,12 +53,20 @@ def delete_credentials(credentials):
     """
     Credential.delete_credentials()
 
+def find_credentials(password):
+	'''
+	Function that finds an account using th ephone number and returns the account
+	'''
+	return Credential.find_by_password(password)
+
 
 def check_if_credentials_exists(password):
     '''
 	Function that checks if an account exists
 	 '''
     return Credential.credentials_exist (password)
+
+
 
 
 def check_if_user_exists(user_name):
@@ -122,20 +130,20 @@ def main():
                     print ('')
 
                 print ("Credential name ...")
-                account_name = input ()
+                account_name = input()
 
                 print ('')
 
                 print("password ...")
-                password = input ()
+                password = input()
 
-                print ('')
+                print('')
 
-                print ("How long would you like your password to be")
+                print ("besides the password you generated now, WE would also like to generate password for you incase! How long would you like your password to be")
                 pass_length = int (input ())
                 password = generate_password (pass_length)
 
-                save_credentials(create_credentials (account_name,  password))
+                save_credentials(create_credentials (account_name,  password, ))
                 print ('')
 
                 print (
@@ -156,6 +164,76 @@ def main():
             print ('')
             print ("You seem to not have any saved accounts yet. Save an account using the cc code")
             print ('')
+
+        elif  short_code== "lg":
+         print("Log in")
+        print("user_name")
+        print("_" * 20)
+        user_name = input ( )
+        print ("Enter Your Password")
+        password = input()
+        if check_if_user_exists(user_name):
+            authenticate_user = user_login(user_name)
+            if authenticate_user.user_name == user_name and authenticate_user.password == password:
+                print("")
+
+
+
+                while True:
+                    print("Use these short codes: cac - create new account, dac - display account, fac - find an account, exit - exit accounts list")
+                    short_code = input().lower()
+
+                    if short_code == 'cac':
+                        print("Creating a New Credential")
+                        print("-" * 10)
+
+                        print ('')
+
+                        print("Credential name ...")
+                        account_name = input()
+
+                        print('')
+
+                        print ("User name ...")
+                        user_name = input ( )
+
+                        print('')
+
+                        print("User name ...")
+
+                        print('')
+
+                        print ("How long would you like your password to be")
+                        pass_length = int (input())
+                        password = generate_password(pass_length)
+
+                        save_credentials(create_credentials(account_name,  user_name,  password))
+                        print('')
+
+                        print("Your New account details including your auto generated password are shown below")
+                        print('')
+
+                        print(f"New account details : Account: {account_name},Email:{email}, Password: {password}",)
+                        print('')
+
+        elif short_code == "exit":
+             print('')
+             print("Goodbye ...")
+             break
+
+
+        else:
+               print("Please input a valid short code")
+
+    else:
+       print("A user with that username does not exist. Please register to start using the application")
+
+
+   elif short_code == "esc"
+     print('')
+     print("Exiting")
+     break else:
+     print ("I'm sorry, the short code does not seem to exist")
 
 if __name__ == '__main__':
         main ()

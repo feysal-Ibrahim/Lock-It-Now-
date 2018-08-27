@@ -30,7 +30,6 @@ class Credential:
     @classmethod
     def display_credentials(cls):
         return cls.credentials_list
-
     @classmethod
     def credentials_exist(cls, password):
         '''

@@ -25,6 +25,8 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
           Credential("github", "987123").save_credentials()
           self.assertEqual(len(Credential.credentials_list), 2)
 
+
+
     def test_delete_credentials(self):
         '''
         test_delete_account to test if an account can be deleted from the account_list
