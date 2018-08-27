@@ -1,3 +1,7 @@
+import string
+import random
+
+
 class Credential:
     '''
         Will generate new instances of account credentials
@@ -15,22 +19,33 @@ class Credential:
             """
 
     def save_credentials(self):
-        Credential.credentials_list.append(self)
+        Credential.credentials_list.append (self)
         '''
         saving credentials object into object list
         '''
 
     def delete_credentials(self):
-        Credential.credentials_list.remove(self)
+        Credential.credentials_list.remove (self)
 
+    @classmethod
+    def display_credentials(cls):
+        return cls.credentials_list
 
-@classmethod
-def display_credential(cls, account_name):
-        """
-        this method will take a user_name and
-        return credentials that matches that user_name
-        """
+    @classmethod
+    def credentials_exist(cls, password):
+        '''
+       M ethod that checks if an account exists from the account list.
 
-        for credential in cls.credential_list:
-            if credential.account_name == account_name:
-                return credential
+         '''
+        for credentials in cls.credentials_list:
+            if credentials.password == password:
+                return True
+
+    @classmethod
+    def generate_password(cls,pass_length):
+        '''
+        class to generate passowrds
+        '''
+        allchar = string.ascii_letters + string.punctuation + string.digits
+        password = ''.join(random.sample(allchar, int(pass_length)))
+        return password
