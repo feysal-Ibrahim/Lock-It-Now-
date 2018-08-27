@@ -6,7 +6,7 @@ class User:
 
     #Init method down here
 
-    def __init__(self, first_name, password):
+    def __init__(self, user_name, password):
         """
               __init__ method helps us define our object
               Args:
@@ -14,7 +14,7 @@ class User:
                   password: New user password.
               """
 
-        self.first_name = first_name
+        self.first_name = user_name
         self.password = password
         """
             create attribute for object.

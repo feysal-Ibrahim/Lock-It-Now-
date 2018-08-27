@@ -7,7 +7,7 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
         User.users_list = []
 
     def test_init(self):
-         self.assertEqual(self.new_user.first_name, "feysal")
+         self.assertEqual(self.new_user.user_name, "feysal")
          self.assertEqual(self.new_user.password, "123456789")
 
     def test_save_user(self):

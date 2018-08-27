@@ -92,7 +92,7 @@ def main():
                 save_user(create_user(first_name, password))
                 break
 
-print(f"User-{first_name}, password-{password}")
+print(f"User-{user_name}, password-{password}")
 print("You successfully created your new account")
 print("__" * 25)
 
