@@ -152,10 +152,10 @@ def main():
             print(f"Credential : {Credential.account_name}, Password : {Credential.password}")
 
             print('')
-
-
-
-
+        else:
+            print ('')
+            print ("You seem to not have any saved accounts yet. Save an account using the cc code")
+            print ('')
 
 if __name__ == '__main__':
         main ()
