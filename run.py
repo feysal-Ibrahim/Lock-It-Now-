@@ -143,7 +143,7 @@ def main():
            break
        else:
            print("404 error, (Inputs not found) Kindly try using the short code provided for consistency")
-           print ('')
+           print('')
 
 
 
