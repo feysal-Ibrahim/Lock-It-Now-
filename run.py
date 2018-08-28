@@ -90,7 +90,7 @@ def generate_password(pass_length):
     return Credential.generate_password (pass_length)
 
 def main():
-    print("Welcome to password locker, come lock your password")
+    print("I AM LOCKING YOUR PASSWORD NOW! ITS NOT A RUDE WAY, JUST FOR YOUR SAFETY")
     print("enter your name!")
     user_name = input()
     print("enter password")
@@ -114,7 +114,7 @@ def main():
 
            print (f"New credentials detail : Credential: {account_name}, Password: {password}", )
 
-           print ('')
+
 
 
        elif short_code == 'dc':
@@ -125,22 +125,25 @@ def main():
 
                    print ('')
            else:
-               print("dispaly does not work!!")
+               print("DATABASE ERROR! it seems you havent saved your credentials yet, Try saving by using the SHORT CODES above!")
 
 
        elif short_code == 'fc':
-            print("enter  the account name for the password")
+            print("enter  the account name for the password ")
             account_input = input()
             if check_if_credentials_exists(account_input):
                 account_input = find_credentials(account_input)
                 print(f"{account_input.account_name}, {account_input.password}")
+                print('')
             else:
-                print("account does not exist")
+                print("DATABASE ERROR!(404 file not found)account does not exist")
        elif short_code == 'exit':
-           print("Goodbye")
+           print("WHY!  THE MACHINE HATES YOU GOING!!, its okey if you decide but DO COME AGAIN!")
+           print ('')
            break
        else:
-           print("hahaaa")
+           print("404 error, (Inputs not found) Kindly try using the short code provided for consistency")
+           print ('')
 
 
 
