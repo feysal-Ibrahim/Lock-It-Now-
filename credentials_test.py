@@ -4,7 +4,7 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
     def setUp(self):
         self.new_credentials = Credential("facebook", "673766")  # create credentials object
 
-    # def tearDown(self):
+    def tearDown(self):
         Credential.credentials_list = []
 
     def test_init(self):
@@ -20,9 +20,9 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
           test_save_multiple_accounts to check if we can save multiple accounts
               objects to our account_list
           '''
-
           self.new_credentials.save_credentials()
-          Credential("github", "987123").save_credentials()
+          test_credentials = Credential("github", "987123")
+          test_credentials.save_credentials()
           self.assertEqual(len(Credential.credentials_list), 2)
 
 
