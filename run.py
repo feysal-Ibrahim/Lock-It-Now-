@@ -82,6 +82,12 @@ def display_credential():
     '''
     return Credential.display_credentials ()
 
+def generate_password(pass_length):
+    '''
+	Function that generates a password
+	'''
+    return User.generate_password (pass_length)
+
 
 def generate_password(pass_length):
     '''
@@ -93,9 +99,11 @@ def main():
     print("I AM LOCKING YOUR PASSWORD NOW! ITS NOT A RUDE WAY, JUST FOR YOUR SAFETY")
     print("enter your name!")
     user_name = input()
-    print("enter password")
+    print ("I would also like to generate password for you! How long would you like your password to be")
+    pass_length = int(input())
     password = input()
-    save_user(create_user_credentials(user_name, password))
+    password = generate_password(pass_length)
+    save_user(create_user_credentials(user_name, password,))
     print(f"""Your user details - Username : {user_name}  Password : {password}""")
 
     while True:
@@ -107,9 +115,6 @@ def main():
            account_name=input()
            print("set password")
            password = input()
-           print ("besides the password you generated now, WE would also like to generate password for you incase! How long would you like your password to be")
-           pass_length = int(input())
-           password = generate_password(pass_length)
            save_credentials (create_credentials(account_name, password, ))
 
            print (f"New credentials detail : Credential: {account_name}, Password: {password}", )

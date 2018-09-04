@@ -5,14 +5,27 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
         self.new_user = User("feysal", "123456789")  # create user object
     def tearDown(self):
         User.users_list = []
+        '''
+        saving users object into object list
+        '''
 
     def test_init(self):
+        
          self.assertEqual(self.new_user.user_name, "feysal")
          self.assertEqual(self.new_user.password, "123456789")
+
+    '''
+          test to confirm if user class object has been instantiated correctly
+         '''
 
     def test_save_user(self):
       self.new_user.save_user()  # saving the new user
       self.assertEqual(len(User.users_list), 1)
+
+      '''
+          test_save accounts to check if we can save a user account
+      '''
+
 
     def test_save_multiple_user(self):
         self.new_user.save_user()
@@ -21,7 +34,7 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
         self.assertEqual(len(User.users_list), 2)
 
         '''
-     another test case test_save_multiple_user to test if we can save multiple user in our users list.
+         test case test_save_multiple_user to test if we can save multiple user in our users list.
         '''
 
     def test_user_login(self):
@@ -34,6 +47,10 @@ class TestUser  (unittest.TestCase): # create a subclass class called TestUser, 
 
             find_user = User.user_name ("Sonko")
             self.assertEqual(find_user.user_name, test_user.user_name)
+
+            '''
+          test_save accounts to check if we  a user can log in to his/her account
+              '''
 
     def test_user_exists(self):
         '''

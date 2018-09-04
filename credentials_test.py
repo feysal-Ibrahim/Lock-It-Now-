@@ -1,21 +1,29 @@
 import unittest  # Importing the unittest module
 from credentials import Credential  # Importing the credential class
 class TestCredential  (unittest.TestCase): # create a subclass  called TestUser, that inherits from unittest TestCase
-    def setUp(self):
+    def setUp(self): # set up the test method
         self.new_credentials = Credential("facebook", "673766")  # create credentials object
 
     def tearDown(self):
-        Credential.credentials_list = []
+        Credential.credentials_list = [] # create empty object list 
 
     def test_init(self):
+         '''
+          test to confirm if account class object has been instantiated correctly
+         '''
          self.assertEqual(self.new_credentials.account_name, "facebook")
          self.assertEqual(self.new_credentials.password, "673766")
 
-    def test_save_credentials(self):
+
+
+    def test_save_credentials(self):# create test to save object
       self.new_credentials.save_credentials()  # saving the new user
       self.assertEqual(len(Credential.credentials_list), 1)
+      '''
+          test_save accounts to check if we can save a user account
+      '''
 
-    def test_save_multiple_credentials(self):
+    def test_save_multiple_credentials(self):# create test to save multiple  credentials object
           '''
           test_save_multiple_accounts to check if we can save multiple accounts
               objects to our account_list
@@ -44,7 +52,7 @@ class TestCredential  (unittest.TestCase): # create a subclass  called TestUser,
 
     def test_credentials_exists(self):
         '''
-        test to check if we can return a Boolean  if we cannot find the contact.
+        test to check if we can return a Boolean if we cannot find the contact.
         '''
 
         self.new_credentials.save_credentials()

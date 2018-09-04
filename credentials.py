@@ -34,7 +34,7 @@ class Credential:
     @classmethod
     def find_credentials(cls, account_name):
         '''
-       M ethod that checks if an account exists from the credentials list.
+       Method that checks if an account exists from the credentials list.
 
          '''
         for credentials in cls.credentials_list:

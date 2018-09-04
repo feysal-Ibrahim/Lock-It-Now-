@@ -41,3 +41,12 @@ class User:
         for user in cls.users_list:
          if user_name == user_name:
             return True
+
+    @classmethod
+    def generate_password(cls, pass_length):
+        '''
+        class to generate passowrds
+        '''
+        allchar = string.ascii_letters + string.punctuation + string.digits
+        password = ''.join(random.sample(allchar, int(pass_length)))
+        return password
